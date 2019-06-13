@@ -1,25 +1,35 @@
 import re
 from PIL import Image
 from PIL import ImageFont
-from PIL import ImageDraw 
+from PIL import ImageDraw
+import requests
+from StringIO import StringIO
+import requests
+import shutil
 
 def is_yubikey(stringVal):
 	return bool(re.match("^(c{6}\w{38})+$", stringVal))
 
 callBack = {
-  "attachments": [],
-  "avatar_url": "https://i.groupme.com/123456789",
-  "created_at": 1302623328,
-  "group_id": "1234567890",
-  "id": "1234567890",
-  "name": "Akul",
-  "sender_id": "12345",
-  "sender_type": "user",
-  "source_guid": "GUID",
-  "system": False,
-  "text": "ccccccjeijnguibcufrkkdhlnfuicgbrnvrbbijevbbe",
-  "user_id": "1234567890"
+    "attachments": [],
+    "source_guid": "86399e2d08967d6b98c10d91891f0a93",
+    "text": "I'm sorry that I keep doing this",
+    "sender_id": "38003981",
+    "system": False,
+    "id": "156038905715356108",
+    "user_id": "38003981",
+    "name": "Christopher Lambert",
+    "created_at": 1560389057,
+    "sender_type": "user",
+    "avatar_url": "https://i.groupme.com/512x512.jpeg.a434c84db02b44098180cf9b79530cf0",
+    "group_id": "47732680"
 }
+
+def download_image(url, saveAs):
+	response = requests.get(url)
+	img = Image.open(StringIO(response.content))
+	img = img.resize((1200, 800))
+	img.save("testing.jpeg")
 
 def create_image(callBack):
 	img = Image.open("image.png")
@@ -31,16 +41,17 @@ def create_image(callBack):
 
 	new_size = (300, 200)
 	new_im = Image.new("RGB", new_size, (255, 255, 255))   ## luckily, this is already black!
-	
+
 
 	draw = ImageDraw.Draw(new_im)
 
-	draw.text((8, 38),"{}: ".format(callBack['name']),(0,0,0),font=font)
+	draw.text((8, 38),"{}: ".format(callBack['name'].split(" ")[0]),(0,0,0),font=font)
 	new_im = new_im.resize((1200, 800))
 
 	new_im.paste(img, ((0, 0)))
 	#new_im.show()
-	profile = Image.open("0.png")
+	response = requests.get(callBack.get("avatar_url"))
+	profile = Image.open(StringIO(response.content))
 	profile = profile.resize((900,500))
 	font = ImageFont.truetype("arial.ttf", 40)
 	# draw.text((x, y),"Sample Text",(r,g,b))
@@ -54,8 +65,9 @@ def create_image(callBack):
 
 def check_message(callBack):
 	if is_yubikey(callBack["text"]):
-		create_image()
+		create_image(callBack)
 
 if __name__ == '__main__':
+	#download_image("https://i.groupme.com/512x512.jpeg.a434c84db02b44098180cf9b79530cf0", 'myImage.jpeg')
 	print is_yubikey("ccccccjeijnguibcufrkkdhlnfuicgbrnvrbbijevbbe")
 	create_image(callBack)
