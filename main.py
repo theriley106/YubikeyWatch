@@ -10,8 +10,8 @@ import json
 import os
 
 MY_BOT_ID = "14b11096b7b9e36470dfc5e083"
-MY_ACCESS_TOKEN = "jZCDAeFXqOxmo3IFB6bhmcqnDj5d5WZ90sobykeG"
-DEFAULT_PIC = "https://via.placeholder.com/512"
+MY_ACCESS_TOKEN = "6cShuodySHWkzDi1ION0f4cnQAZAH1GeofRkbmqW"
+DEFAULT_PIC = "https://placeimg.com/512/512/tech"
 
 def is_yubikey(stringVal):
 	return bool(re.match("^(c{6}\w{38})+$", stringVal))
