@@ -9,7 +9,7 @@ import shutil
 import json
 import os
 
-MY_BOT_ID = "14b11096b7b9e36470dfc5e083"
+MY_BOT_ID = "ba10a3a35929f5dd3355adfe46"
 MY_ACCESS_TOKEN = "6cShuodySHWkzDi1ION0f4cnQAZAH1GeofRkbmqW"
 DEFAULT_PIC = "https://placeimg.com/512/512/tech"
 
@@ -64,7 +64,7 @@ def post_image_to_group_me(img):
 	# Takes in an Image object
 	# Returns nothing
 	data = {"bot_id"  : MY_BOT_ID,
-	  "text"    : "Hello worldz",
+	  "text"    : "sToP PoStInG YoUr yUbIkEy iN ThE GrOuP Me",
 	  "attachments" : [
 	    {
 	      "type"  : "image",
