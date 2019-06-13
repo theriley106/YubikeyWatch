@@ -6,6 +6,8 @@ import requests
 from StringIO import StringIO
 import requests
 import shutil
+import json
+import os
 
 def is_yubikey(stringVal):
 	return bool(re.match("^(c{6}\w{38})+$", stringVal))
@@ -61,7 +63,26 @@ def create_image(callBack):
 	draw.text((20, 440),'"' + callBack['text'] + '"',(255,255,0),font=font)
 	new_im.paste(profile, ((30, 270)))
 	new_im.save('sample-out.png')
-	pass
+
+	output = StringIO()
+	format = 'PNG' # or 'JPEG' or whatever you want
+	new_im.save(output, format)
+	data = output.getvalue()
+	output.close()
+
+
+	headers = {
+	    'X-Access-Token': 'jZCDAeFXqOxmo3IFB6bhmcqnDj5d5WZ90sobykeG',
+	    'Content-Type': 'image/jpeg',
+	}
+	response = requests.post('https://image.groupme.com/pictures', headers=headers, data=data)
+	#os.system("curl 'https://image.groupme.com/pictures'" + ' -X POST -H "X-Access-Token: jZCDAeFXqOxmo3IFB6bhmcqnDj5d5WZ90sobykeG" -H "Content-Type: image/jpeg" --data-binary @sample-out.png > t.txt')
+
+	a = json.load(open('t.txt'))
+	print a
+	a = a['payload']['picture_url']
+	x = '''{"bot_id"  : "14b11096b7b9e36470dfc5e083","text"    : "Hello world","attachments" : [{"type"  : "image","url"   : "''' + a + '''"}]}'''
+	os.system('''curl -d '{}' https://api.groupme.com/v3/bots/post'''.format(x))
 
 def check_message(callBack):
 	if is_yubikey(callBack["text"]):
