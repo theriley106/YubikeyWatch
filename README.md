@@ -23,7 +23,7 @@ callBack = {
     "name": "Christopher Lambert",
     "created_at": 1560389057,
     "sender_type": "user",
-    "avatar_url": "https://i.groupme.com/512x512.jpeg",
+    "avatar_url": "REDACTED PROFILE PICTURE URL",
     "group_id": "4770"
 }
 
