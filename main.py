@@ -14,22 +14,8 @@ MY_ACCESS_TOKEN = "6cShuodySHWkzDi1ION0f4cnQAZAH1GeofRkbmqW"
 DEFAULT_PIC = "https://placeimg.com/512/512/tech"
 
 def is_yubikey(stringVal):
+	# This regex detects if the message is an accidental Yubikey post
 	return bool(re.match("^(c{6}\w{38})+$", stringVal))
-
-callBack = {
-    "attachments": [],
-    "source_guid": "86399e2d08967d6b98c10d91891f0a93",
-    "text": "I'm sorry that I keep doing this",
-    "sender_id": "38003981",
-    "system": False,
-    "id": "156038905715356108",
-    "user_id": "38003981",
-    "name": "Christopher Lambert",
-    "created_at": 1560389057,
-    "sender_type": "user",
-    "avatar_url": "https://i.groupme.com/512x512.jpeg.a434c84db02b44098180cf9b79530cf0",
-    "group_id": "47732680"
-}
 
 def download_image(url):
 	# This downloads the profile picture from GroupMe
