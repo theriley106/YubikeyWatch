@@ -45,7 +45,9 @@ Then I download the GroupMe user's profile picture and enlarge it *without* main
 
 Then it combines all of the seperate images together to create something like this:
 
-
+<p align="center">
+  <img src="static/sample_out.png"/>
+</p>
 
 ## Example
 
