@@ -12,7 +12,8 @@ I have a GroupMe bot called "tHeYuBiKeYpOlIcE" with the Callback URL pointing to
 
 Whenever a new post is made in the specified GroupMe thread, a POST request is sent to the Callback URL containing a payload similar to the following:
 
-callBack = {
+```javascript
+{
     "attachments": [],
     "source_guid": "REDACTED",
     "text": "Example Groupme post",
@@ -26,6 +27,7 @@ callBack = {
     "avatar_url": "REDACTED PROFILE PICTURE URL",
     "group_id": "4770"
 }
+```
 
 I parse that payload and pull out the "text", "name", and "avatar_url" values.
 
