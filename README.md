@@ -39,22 +39,22 @@ If it matches, that means that the message was posted with an accidental yubikey
 
 After a message matches the regex value, I programatically create the dank meme by passing the "avatar_url" and "name" values to *main.create_image()*.
 
-This function uses Python's Pillow library to write the user's first name to a blank canvas with size 40 arial font.  I take this canvas and enlarge it to simulate the blurry effect.
+This function uses Python's Pillow library to write the user's first name to a blank canvas with size 40 arial font.  I take this canvas and enlarge it to simulate this blurry effect:
 
 <p align="center">
-  <img src="static/name.png" width="250px"/>
+  <img src="static/name.png" width="300px"/>
 </p>
 
 Then I download the GroupMe user's profile picture and enlarge it *without* maintaining the aspect ratio.  I use Pillow again to write the "text" value on top of the user's profile picture.
 
-<p align="center" width="250">
-  <img src="static/3.png"/>
+<p align="center">
+  <img src="static/3.png" width="300px"/>
 </p>
 
 Then the program combines the 2 custom images with the tempate image to create something like this:
 
-<p align="center" width="250">
-  <img src="static/sample_out.png"/>
+<p align="center">
+  <img src="static/sample_out.png" width="300px"/>
 </p>
 
 ## Example
