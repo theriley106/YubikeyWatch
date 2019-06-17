@@ -47,7 +47,11 @@ This function uses Python's Pillow library to write the user's first name to a b
 
 Then I download the GroupMe user's profile picture and enlarge it *without* maintaining the aspect ratio.  I use Pillow again to write the "text" value on top of the user's profile picture.
 
-Then it combines all of the seperate images together to create something like this:
+<p align="center">
+  <img src="static/3.png"/>
+</p>
+
+Then the program combines the 2 custom images with the tempate image to create something like this:
 
 <p align="center">
   <img src="static/sample_out.png"/>
