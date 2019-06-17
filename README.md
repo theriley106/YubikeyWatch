@@ -41,7 +41,7 @@ After a message matches the regex value, I programatically create the dank meme 
 
 This function uses Python's Pillow library to write the user's first name to a blank canvas with size 40 arial font.  I take this canvas and enlarge it to simulate the blurry effect.
 
-<p align="center" width="250">
+<p align="center" width="250px">
   <img src="static/name.png"/>
 </p>
 
