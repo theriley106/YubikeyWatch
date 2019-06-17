@@ -19,7 +19,7 @@ Whenever a new post is made in the specified GroupMe thread, a POST request is s
     "system": False,
     "id": "REDACTED",
     "user_id": "3981",
-    "name": "Christopher Lambert",
+    "name": "Christopher L",
     "created_at": 1560389057,
     "sender_type": "user",
     "avatar_url": "REDACTED PROFILE PICTURE URL",
