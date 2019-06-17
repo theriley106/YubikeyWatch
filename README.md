@@ -51,7 +51,7 @@ Then I download the GroupMe user's profile picture and enlarge it *without* main
   <img src="static/3.png" width="400px"/>
 </p>
 
-Then the program combines the 2 custom images with the tempate image to create something like this:
+Then the program combines the 2 custom images with the template image to create something like this:
 
 <p align="center">
   <img src="static/sample-out.png" width="400px"/>
@@ -59,6 +59,9 @@ Then the program combines the 2 custom images with the tempate image to create s
 
 ## Example
 
+<p align="center">
+  <img src="static/example.png" width="500px"/>
+</p>
 
 
 
