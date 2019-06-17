@@ -2,7 +2,7 @@
 
 ## What does this do?
 
-This bot creates and posts dank memes whenever someone accidentally posts a Yubikey in a GroupMe thread.
+This bot creates and posts **dank memes** whenever someone accidentally posts a Yubikey in a GroupMe thread.
 
 ## How does this work? (Technical Overview)
 
