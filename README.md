@@ -42,19 +42,19 @@ After a message matches the regex value, I programatically create the dank meme 
 This function uses Python's Pillow library to write the user's first name to a blank canvas with size 40 arial font.  I take this canvas and enlarge it to simulate this blurry effect:
 
 <p align="center">
-  <img src="static/name.png" width="300px"/>
+  <img src="static/name.png" width="400px"/>
 </p>
 
 Then I download the GroupMe user's profile picture and enlarge it *without* maintaining the aspect ratio.  I use Pillow again to write the "text" value on top of the user's profile picture.
 
 <p align="center">
-  <img src="static/3.png" width="300px"/>
+  <img src="static/3.png" width="400px"/>
 </p>
 
 Then the program combines the 2 custom images with the tempate image to create something like this:
 
 <p align="center">
-  <img src="static/sample_out.png" width="300px"/>
+  <img src="static/sample-out.png" width="400px"/>
 </p>
 
 ## Example
