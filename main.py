@@ -96,9 +96,14 @@ def create_image(callBack):
 	post_image_to_group_me(new_im)
 	# Posts the image to the GroupMe
 
+def is_mention(callBack):
+	return '@yubikey' in str(callBack).lower()
+
 def check_message(callBack):
 	if is_yubikey(callBack["text"]):
 		create_image(callBack)
+	elif is_mention(callBack["text"]):
+		print("SHOULD MENTION THE PERSON")
 
 if __name__ == '__main__':
 	#download_image("https://i.groupme.com/512x512.jpeg.a434c84db02b44098180cf9b79530cf0", 'myImage.jpeg')
