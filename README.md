@@ -1,4 +1,7 @@
-# YubikeyWatch
+<p align="center">
+  <img src="static/yubikey.jpg" width="500px"/>
+  <h3>YubikeyWatch</h3>
+</p>
 
 ## What does this do?
 
