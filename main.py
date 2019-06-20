@@ -60,8 +60,6 @@ def post_image_to_group_me(img):
 	}
 	response = requests.post('https://api.groupme.com/v3/bots/post', json=data)
 
-
-
 def create_image(callBack):
 	# This function creates the meme image
 	# Takes in the data sent as a post request from GroupMe
