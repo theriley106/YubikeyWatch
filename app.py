@@ -16,7 +16,6 @@ def webhook():
 	# 'message' is an object that represents a single GroupMe message.
 	print(request.get_json())
 	main.check_message(request.get_json())
-	print(request.get_json())
 	return "ok", 200
 
 if __name__ == '__main__':
