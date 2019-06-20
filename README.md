@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="static/yubikey.jpg" width="500px"/>
-  <h3>YubikeyWatch</h3>
+  <img src="static/yubikey.jpg" width="50px"/>
+  <h3 align='center'>YubikeyWatch</h3>
 </p>
 
 ## What does this do?
