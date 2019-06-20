@@ -95,6 +95,7 @@ def create_image(callBack):
 	# Posts the image to the GroupMe
 
 def is_mention(callBack):
+	# This means that the bot was mentioned and it should respond with "about" message
 	return '@yubikey' in str(callBack).lower() and 'about' in str(callBack).lower()
 
 def check_message(callBack):
