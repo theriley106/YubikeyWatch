@@ -65,3 +65,5 @@ Then the program combines the 2 custom images with the template image to create 
 <p align="center">
   <img src="static/example.png" width="500px"/>
 </p>
+
+
