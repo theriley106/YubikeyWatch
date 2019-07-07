@@ -9,8 +9,8 @@ import shutil
 import json
 import os
 
-MY_BOT_ID = "14b11096b7b9e36470dfc5e083"
-MY_ACCESS_TOKEN = "6cShuodySHWkzDi1ION0f4cnQAZAH1GeofRkbmqW"
+MY_BOT_ID = os.environ['MY_BOT_ID']
+MY_ACCESS_TOKEN = os.environ['MY_ACCESS_TOKEN']
 # Accesss token for GroupMe API
 DEFAULT_PIC = "https://placeimg.com/512/512/tech"
 # Default picture if the user does not a profile pic
@@ -110,7 +110,7 @@ def create_image(callBack):
 
 def is_mention(callBack):
 	# This means that the bot was mentioned and it should respond with "about" message
-	return '@yubikey' in str(callBack).lower() and 'about' in str(callBack).lower()
+	return '@tHeYuBiKeYpOlIcE' in str(callBack).lower() and 'about' in str(callBack).lower()
 
 def check_message(callBack):
 	if is_yubikey(callBack["text"]):
