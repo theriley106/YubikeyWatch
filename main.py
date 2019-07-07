@@ -11,7 +11,9 @@ import os
 
 MY_BOT_ID = "14b11096b7b9e36470dfc5e083"
 MY_ACCESS_TOKEN = "6cShuodySHWkzDi1ION0f4cnQAZAH1GeofRkbmqW"
+# Accesss token for GroupMe API
 DEFAULT_PIC = "https://placeimg.com/512/512/tech"
+# Default picture if the user does not a profile pic
 
 def is_yubikey(stringVal):
 	# This regex detects if the message is an accidental Yubikey post

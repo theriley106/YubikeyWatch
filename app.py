@@ -1,8 +1,3 @@
-
-# RESOURCE: http://www.apnorton.com/blog/2017/02/28/How-I-wrote-a-Groupme-Chatbot-in-24-hours/
-
-
-# IMPORTS
 import os
 import main
 import json
@@ -13,9 +8,11 @@ app = Flask(__name__)
 # Called whenever the app's callback URL receives a POST request
 @app.route('/', methods=['POST'])
 def webhook():
-	# 'message' is an object that represents a single GroupMe message.
+	# 'message' is an object that represents a single GroupMe message
 	print(request.get_json())
+	# Prints the payload to the console
 	main.check_message(request.get_json())
+	# Checks to see how to respond to the message
 	return "ok", 200
 
 if __name__ == '__main__':
