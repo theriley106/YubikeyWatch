@@ -10,7 +10,9 @@
 
 This bot creates and posts **dank memes** whenever someone accidentally posts a Yubikey in a GroupMe thread.
 
-## How does this work? (Dynamic Meme Generation Technical Overview)
+## How does this work? (Technical Overview)
+
+This project uses cutting edge **Dynamic Meme Generation Technology** to generate memes in real time.
 
 I have a GroupMe bot called "tHeYuBiKeYpOlIcE" with the Callback URL pointing to a heroku app that contains the code in this repo.
 
