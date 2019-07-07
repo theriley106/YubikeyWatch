@@ -110,7 +110,7 @@ def create_image(callBack):
 
 def is_mention(callBack):
 	# This means that the bot was mentioned and it should respond with "about" message
-	return '@tHeYuBiKeYpOlIcE' in str(callBack).lower() and 'about' in str(callBack).lower()
+	return '@theyubikeypolice' in str(callBack).lower() and 'about' in str(callBack).lower()
 
 def check_message(callBack):
 	if is_yubikey(callBack["text"]):
