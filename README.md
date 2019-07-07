@@ -10,7 +10,7 @@
 
 This bot creates and posts **dank memes** whenever someone accidentally posts a Yubikey in a GroupMe thread.
 
-## How does this work? (Technical Overview)
+## How does this work? (Dynamic Meme Generation Technical Overview)
 
 I have a GroupMe bot called "tHeYuBiKeYpOlIcE" with the Callback URL pointing to a heroku app that contains the code in this repo.
 
