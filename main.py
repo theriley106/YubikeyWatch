@@ -15,10 +15,8 @@ MY_ACCESS_TOKEN = "6cShuodySHWkzDi1ION0f4cnQAZAH1GeofRkbmqW"
 DEFAULT_PIC = "https://placeimg.com/512/512/tech"
 # Default picture if the user does not a profile pic
 
-ABOUT_TEXT = """This bot creates dank memes if a YubiKey is accidentally posted in the C1 Slack/GroupMe.
-
+ABOUT_TEXT = """This bot creates *custom* dank memes when an accidental YubiKey post is made in the C1 Slack/GroupMe.
 Check out the source code here:
-
 https://github.com/theriley106/YubikeyWatch"""
 
 def is_yubikey(stringVal):
