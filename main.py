@@ -62,6 +62,14 @@ def post_image_to_group_me(img):
 	}
 	response = requests.post('https://api.groupme.com/v3/bots/post', json=data)
 
+def post_text_to_group_me(text):
+	# Takes in a string
+	# Returns nothing
+	data = {"bot_id"  : MY_BOT_ID,
+	  "text"    : text
+	}
+	response = requests.post('https://api.groupme.com/v3/bots/post', json=data)
+
 def create_image(callBack):
 	# This function creates the meme image
 	# Takes in the data sent as a post request from GroupMe
@@ -104,7 +112,7 @@ def check_message(callBack):
 	if is_yubikey(callBack["text"]):
 		create_image(callBack)
 	elif is_mention(callBack["text"]):
-		print("SHOULD MENTION THE PERSON")
+		post_text_to_group_me("SHOULD MENTION THE PERSON")
 
 if __name__ == '__main__':
 	#download_image("https://i.groupme.com/512x512.jpeg.a434c84db02b44098180cf9b79530cf0", 'myImage.jpeg')
