@@ -80,7 +80,3 @@ For instance, "yubikey_about()" will trigger a message with information about th
 <p align="center">
   <img src="static/about.png" width="700px"/>
 </p>
-
-## License
-
-TLDR: This project is MIT licensed, and you can distribute/use/modify the code in pretty much any way you please.
