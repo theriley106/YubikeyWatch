@@ -68,3 +68,16 @@ Then the program combines the 2 custom images with the template image to create 
 <p align="center">
   <img src="static/example.png" width="500px"/>
 </p>
+
+## Extending Functionality
+
+You can also use main.py to trigger functions based on messages that are posted in the chat.
+
+For instance, "yubikey_about()" will trigger the bot to respond with information about the bot.
+
+<p align="center">
+  <img src="static/about.png" width="500px"/>
+</p>
+
+
+
