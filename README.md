@@ -76,8 +76,5 @@ You can also use main.py to trigger functions based on messages that are posted 
 For instance, "yubikey_about()" will trigger the bot to respond with information about the bot.
 
 <p align="center">
-  <img src="static/about.png" width="500px"/>
+  <img src="static/about.png" width="700px"/>
 </p>
-
-
-
