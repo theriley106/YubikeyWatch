@@ -16,8 +16,8 @@ DEFAULT_PIC = "https://placeimg.com/512/512/tech"
 # Default picture if the user does not a profile pic
 
 ABOUT_TEXT = """This bot creates *custom* dank memes when an accidental YubiKey post is made in the C1 Slack/GroupMe.
-Check out the source code here:
-https://github.com/theriley106/YubikeyWatch"""
+
+Check out the source code here: https://github.com/theriley106/YubikeyWatch"""
 
 def is_yubikey(stringVal):
 	# This regex detects if the message is an accidental Yubikey post
